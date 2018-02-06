@@ -16,10 +16,6 @@ gem install rails
 rails server
 ```
 
-## Authors 👥
-
-* **Marie-Elise Haddad**
-
 ## License 📄
 
 This project is licensed under the MIT License.
