@@ -1,24 +1,26 @@
-# README
+## Blog with Ruby
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started 📦
 
-Things you may want to cover:
+### Installation
 
-* Ruby version
+First, do not forget to install rails :
 
-* System dependencies
+```
+gem install rails
+```
 
-* Configuration
+### For start server
 
-* Database creation
+```
+rails server
+```
 
-* Database initialization
+## Authors 👥
 
-* How to run the test suite
+* **Marie-Elise Haddad**
 
-* Services (job queues, cache servers, search engines, etc.)
+## License 📄
 
-* Deployment instructions
+This project is licensed under the MIT License.
 
-* ...
