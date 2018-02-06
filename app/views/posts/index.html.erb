@@ -1,0 +1,6 @@
+<h1>hello</h1>
+
+<% @posts.each do | post | %>
+<p> <%= post.title %> </p>
+<%= link_to 'voir le poste', post_path(post.id) %>
+<% end %>

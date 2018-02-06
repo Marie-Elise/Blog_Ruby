@@ -1,0 +1,13 @@
+<h1>hello mae</h1>
+
+<p>tous nos utilisateurs :</p>
+
+<% @users.each do |user| %>
+<p><%= user.username %></p>
+<% end %>
+
+<p>tous nos posts :</p>
+<% @posts.each do |post| %>
+<p><%= post.title %></p>
+<%= link_to 'voir le poste', post_path(post.id) %>
+<% end %>
