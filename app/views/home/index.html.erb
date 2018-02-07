@@ -6,6 +6,12 @@
 <p><%= user.username %></p>
 <% end %>
 
+<div>
+	<p>voir plus de blogs</hp>
+	<%= link_to 'voir les blogs', blogs_path %>
+</div>
+
+
 <p>tous nos posts :</p>
 <% @posts.each do |post| %>
 <p><%= post.title %></p>
