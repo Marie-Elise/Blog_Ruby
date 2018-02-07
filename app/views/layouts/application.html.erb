@@ -9,7 +9,7 @@
   </head>
 
   <body>
-  <%= link_to('Deconnexion - ', destroy_user_session_path, method: :delete) %>
-    <%= yield %>
+  <%= render partial:'partials/header' %>
+  <%= yield %>
   </body>
 </html>
