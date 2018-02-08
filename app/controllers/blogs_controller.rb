@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
     @users = User.all
 	end
   def show
-	  @posts = @user.post.all
+    @user = User.find(params[:id])
+	  @posts = @user.posts.all
   end
-
 end

@@ -3,6 +3,6 @@
 	<li><%=link_to('New post', new_post_path)%></li>
 	<li><%= link_to('Mon blog', blog_path(current_user.username)) %></li>
 	<li><%= link_to('Deconnexion - '+current_user.username, destroy_user_session_path, method: :delete) %></li>
-<% end %>
-<div class="message message-success"><%= flash[:notice] %></div>
+	<div class="message message-success"><%= flash[:notice] %></div>
 <div class="message message-error"><%= flash[:error] %></div>
+<% end %>
