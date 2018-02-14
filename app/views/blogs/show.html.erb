@@ -3,7 +3,7 @@
   <div>
 		<h3><%= post.title %></h3>
     <p><%= truncate(post.content, length: 300) %></p>
-    <%=link_to('Editer le post', edit_post_path)%>
+    <%=link_to('Editer le post', edit_post_path(post.id))%>
   </div>
 <% end %>
 

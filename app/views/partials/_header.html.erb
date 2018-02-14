@@ -1,8 +1,13 @@
+<nav class="navbar navbar-light bg-faded">
 <% if user_signed_in? %>
 	<li><%= link_to  "Home", root_path %></li>
 	<li><%=link_to('New post', new_post_path)%></li>
 	<li><%= link_to('Mon blog', blog_path(current_user.id)) %></li>
 	<li><%= link_to('Deconnexion - '+current_user.username, destroy_user_session_path, method: :delete) %></li>
 	<div class="message message-success"><%= flash[:notice] %></div>
-<div class="message message-error"><%= flash[:error] %></div>
+	<div class="message message-error"><%= flash[:error] %></div>
 <% end %>
+</nav>
+
+
+
