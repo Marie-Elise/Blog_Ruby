@@ -1,22 +1,32 @@
-<h1>hello</h1>
+<div class="container">
+    <h1 class="mt-4"><%= @post.title %></h1>
+    <p class="lead">
+        by
+        <a href="#"><%= @author.username %></a>
+    </p>
+    <p class="lead">
+    <%= @post.content %>
+    </p>
+    
+    <%=link_to 'Editer le post', edit_post_path(@post.id) %>
+    <%=link_to 'Supprimer le post', post_path(@post.id), method: :delete%>
+    
+    <div class="card my-4">
+    <%= form_for(@comment, url: post_comments_path(@post.id) ) do |f|%>
+        <h5 class="card-header"><%= f.label :message %></h5>
+        <div class="card-body">
+        <form>
+            <div class="form-group form-control" rows="3"><%= f.text_area :message %></div>
+            <button type="submit" class="btn btn-primary"><%= f.submit %></button>
+        </form>
+        </div>
+    <% end %>
+    </div>
 
-<%= @post.title %>
-<%= @post.content %>
-<%= @author.username %>
-
-<%=link_to 'Editer le post', edit_post_path(@post.id) %>
-<%=link_to('Supprimer le post', post_path(@post.id), method: :delete)%>
-
-
-<%= form_for(@comment, url: post_comments_path(@post.id) ) do |f|%>
-    <%= f.label :message %>
-    <%= f.text_area :message %>
-    <%= f.submit %>
-<% end %>
-
-
-<p>Les commentaires :</p>
-<% @comments.each do | comment | %>
-    <p><%= comment.message %></p>
-    <%=link_to('Supprimer le commentaire', post_comments_path(@post.id), method: :delete)%>
-<% end %>
+    
+    <h4>Commentaires </h4>
+    <% @comments.each do | comment | %>
+        <p><%= comment.message %></p>
+        <%=link_to('Supprimer le commentaire', post_comment_path(@post.id, comment.id), method: :delete)%>
+    <% end %>
+</div>

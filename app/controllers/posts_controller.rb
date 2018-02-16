@@ -26,12 +26,8 @@ class PostsController < ApplicationController
         redirect_to post_path(@post.id)
     end
     def destroy
-        if @post = Post.find(params[:id]);
-        @post.destroy
-        flash[:notice] = 'Post supprimé'
-		else 
-			flash[:error] = "Vous n'avez pas la permission d'effectuer cette action"
-		end
+        @post = Post.find(params[:id])
+        @post.destroy!
         redirect_to posts_path
     end
  end

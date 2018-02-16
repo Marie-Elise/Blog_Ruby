@@ -12,12 +12,9 @@ class CommentsController < ApplicationController
         @comments = Post.find(params[:post_id]).comments.all
     end
     def destroy
-        if @comments = Post.find(params[:id]);
-        @comments.destroy
-        flash[:notice] = 'commentaire supprimé'
-		else 
-			flash[:error] = "Vous n'avez pas la permission d'effectuer cette action"
-		end
+        @post = Post.find(params[:post_id])
+        @comment = @post.comments.find(params[:id])
+        @comment.destroy
         redirect_to posts_path
     end
     def comment_params

@@ -169,7 +169,7 @@ a {
 
 a:hover {
   color: #0056b3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -4375,6 +4375,7 @@ tbody.collapse.show {
 
 .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
   color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
 }
 
 .navbar-dark .navbar-brand {
@@ -4423,6 +4424,7 @@ tbody.collapse.show {
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
+  text-decoration: none;
 }
 
 .card {
