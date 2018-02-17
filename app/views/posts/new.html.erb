@@ -1,13 +1,22 @@
-<div class="container-fluid">
-<%= form_for(@post, url: posts_path) do |f| %>
-    <label>
-        titre 
-    </label>
-    <%= f.text_field :title %>
-    <label>
-        Contenu
-    </label>
-    <%= f.text_area :content %>
-    <%= f.submit %>
-<% end %>
-</div>
+<div class="container">
+    <div class="add-comment">
+        <header>
+            <h2 class="h6">Ajoutez un article</h2>
+        </header>
+        <%= form_for(@post, url: posts_path) do |f| %>
+        <form action="#" class="commenting-form">
+            <div class="row">
+                <div class="form-group col-md-6 form-control">
+                    <%= f.text_field :title %>
+                </div>
+                <div class="form-group col-md-12 form-control">
+                    <%= f.text_area :content %>
+                </div>
+                <div class="form-group col-md-12">
+                    <%= f.submit %>
+                </div>
+            </div>
+        </form>
+        <% end %>
+    </div>
+

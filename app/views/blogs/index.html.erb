@@ -1,9 +1,11 @@
-<div class="container-fluid">
-
-<h1>Tous les blogs</h1>
-
-<% @users.each do |user| %>
-	<h2><%= user.username %></h2>
-	<%= link_to 'Voir le blog', blog_path(user.id) %>
-<% end %>
+<div class="container">
+	<header> 
+		<p class="text-big">Tous nos bloggeurs,</p>
+	</header>
+	<% @users.each do |user| %>
+	<div class="link_blog">
+		<h6><%= user.username %></h6>
+		<%= link_to 'Voir le blog', blog_path(user.id) %>
+	</div>
+	<% end %>
 </div>
