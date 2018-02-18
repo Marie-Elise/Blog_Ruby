@@ -12,30 +12,16 @@
 					<% @posts.each do |post| %>
 					<div class="post col-xl-6">
 						<div class="post-details">
-							<div class="post-meta d-flex justify-content-between">
-								<div class="date meta-last">20 May | 2016</div>
-								<div class="category"><a href="#">Business</div>
-							</div>
 							<h3 class="h4"><%= post.title %></h3></a>
 							<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-							<footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
-								<div class="title"><span>John Doe</span></div></a>
-								<div class="date"><i class="icon-clock"></i><%= link_to 'voir le poste', post_path(post.id) %></div>
+							<footer class="post-footer d-flex align-items-center">
+								<div class="title"><span></span></div></a>
+								<div class="see-post"><%= link_to 'voir le poste', post_path(post.id) %></div>
 							</footer>
 						</div>
 					</div>
 					<% end %>
 				</div>
-				<!-- Pagination -->
-				<nav aria-label="Page navigation example">
-					<ul class="pagination pagination-template d-flex justify-content-center">
-						<li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
-						<li class="page-item"><a href="#" class="page-link active">1</a></li>
-				  		<li class="page-item"><a href="#" class="page-link">2</a></li>
-				  		<li class="page-item"><a href="#" class="page-link">3</a></li>
-				  		<li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
-					</ul>
-				</nav>
 			</div>
 		</main>
 		
@@ -49,30 +35,14 @@
 					<% @users.each do |user| %>
 					<div class="item d-flex align-items-center">
 						<div class="title"><strong><%= user.username %></strong>
-							<div class="d-flex align-items-center">
-								<div class="views"><i class="icon-eye"></i> 500</div>
-								<div class="comments"><i class="icon-comment"></i>12</div>
-							</div>
+						<%= link_to '- voir le blog', blog_path(user.id) %>
 						</div>
 					</div>
 					<% end %>
 				</div>
-				<%= link_to 'voir plus de blogs', blogs_path %>
+				<%= link_to 'Voir plus de blogs', blogs_path %>
 			</div>
-			
-			<!-- Tags -->
-			<div class="widget tags">
-				<header>
-					<h3 class="h6">Tags</h3>
-				</header>
-				<ul class="list-inline">
-					<li class="list-inline-item"><a href="#" class="tag">#Business</a></li>
-					<li class="list-inline-item"><a href="#" class="tag">#Technology</a></li>
-					<li class="list-inline-item"><a href="#" class="tag">#Fashion</a></li>
-					<li class="list-inline-item"><a href="#" class="tag">#Sports</a></li>
-					<li class="list-inline-item"><a href="#" class="tag">#Economy</a></li>
-				</ul>
-			</div>
+
 		</aside>
 	</div>
 </div>
