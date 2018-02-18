@@ -2,39 +2,39 @@
     <h1 class="mt-4"><%= @post.title %></h1>
     <p class="lead">
         by
-        <a href="#"><%= @author.username %></a>
+        <a><%= @author.username %></a>
     </p>
     <p class="lead">
-    <%= @post.content %>
+        <%= @post.content %>
     </p>
-
+    
     <% if @post.user_id == current_user.id %>
     <%=link_to 'Editer le post', edit_post_path(@post.id) %>
     <%=link_to 'Supprimer le post', post_path(@post.id), method: :delete%>
     <% end %>
-
-
     
     <div class="card my-4">
-    <%= form_for(@comment, url: post_comments_path(@post.id) ) do |f|%>
+        <%= form_for(@comment, url: post_comments_path(@post.id) ) do |f|%>
         <h5 class="card-header"><%= f.label :message %></h5>
         <div class="card-body">
-        <form>
-            <div class="form-group form-control" rows="3"><%= f.text_area :message %></div>
-            <button type="submit" class="btn btn-secondary">envoyer</button>
-        </form>
+            <form>
+                <div class="form-group form-control" rows="3"><%= f.text_area :message %></div>
+                <div class="container-login100-form-btn col-lg-4">
+                    <button class="login100-form-btn">
+                        envoyer
+                    </button>
+                </div>
+            </form>
         </div>
-    <% end %>
+        <% end %>
     </div>
-
     
     <h4>Commentaires </h4>
     <% @comments.each do | comment | %>
         <p><%= comment.message %></p>
         <% if comment.user_id == current_user.id || @post.user_id == current_user.id %>
-        <%=link_to('Supprimer le commentaire', post_comment_path(@post.id, comment.id), method: :delete)%>
+            <%=link_to('Supprimer le commentaire', post_comment_path(@post.id, comment.id), method: :delete)%>
         <% end %>
     <% end %>
-
-    
+  
 </div>

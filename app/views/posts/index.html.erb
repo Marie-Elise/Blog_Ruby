@@ -4,8 +4,7 @@
     </header>
     <% @posts.each do | post | %>
     <div class="link_blog">
-        <h6><%= post.title %></h6>
-        <p>by</p>
+        <h3><%= post.title %></h3>
         <%= link_to 'voir le poste', post_path(post.id) %>
     </div>
 <% end %>

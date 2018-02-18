@@ -224,6 +224,9 @@ input.input100 {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+.login100-form-btn a {
+  color: #fff;
+}
 .login100-form-btn:hover {
   color: #6675df;
   border: 2px solid #6675df;

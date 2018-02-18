@@ -1,22 +1,20 @@
-## Blog with Ruby
+## SuperBlog with Ruby
 
-## Getting Started 📦
+## Features
 
-### Installation
+* Create posts
+* The platform is only available to registered users.
+* Once registered a user has his own page with his own posts.
+* Each post can be consulted and commented.
+* The author of the blog can delete comments.
+* The author of the comment can delete his own comment.
+* Page 404
 
-First, do not forget to install rails :
+**We apologize for missing the translation**
 
-```
-gem install rails
-```
+## Authors 👥
 
-### For start server
+* **Marie-Elise Haddad**
+* **Alex Thery**
 
-```
-rails server
-```
-
-## License 📄
-
-This project is licensed under the MIT License.
 

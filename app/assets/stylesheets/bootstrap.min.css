@@ -4710,8 +4710,11 @@ tbody.collapse.show {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: rgba(0, 0, 0, .03);
-    border-bottom: 1px solid rgba(0, 0, 0, .125)
+    background-color: #6675df;
+    border-bottom: 1px solid#6675df)
+}
+.card-header label{
+    color : #ffffff;
 }
 
 .card-header:first-child {

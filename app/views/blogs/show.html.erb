@@ -8,19 +8,20 @@
       </div>
   </section>
   
-
   <div class="row">
-  <% @posts.each do |post| %>
-      <div class="text article col-lg-7">
-          <div class="content">
-            <h2 class="h4"><%= post.title %></h2>
-            <p><%= truncate(post.content, length: 300) %></p>
-            <footer class="d-flex">
-                <div><%=link_to('Editer le post', edit_post_path(post.id))%></div>
-                <div><%=link_to 'Supprimer le post', post_path(post.id), method: :delete %></div>
-            </footer>
+    <% @posts.each do |post| %>
+    <div class="text article col-lg-7">
+      <div class="content">
+        <h2 class="h4"><%= post.title %></h2>
+        <p><%= truncate(post.content, length: 300) %></p>
+        <div class="container-login100-form-btn col-lg-4">
+          <button class="login100-form-btn">
+            <%= link_to 'voir la suite', post_path(post.id) %>
+          </button>
         </div>
       </div>
-      <% end %>
     </div>
+    <% end %>
+  </div>
+  
 </div>

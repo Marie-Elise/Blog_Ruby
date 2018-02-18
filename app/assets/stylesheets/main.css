@@ -114,8 +114,12 @@ section.latest-posts header {
   margin-bottom: 1rem;
 }
 div.content{
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
+.blog-delete a{
+  margin-left: 30px;
+}
+
 
 /* Latest bloggeurs */
 main,
