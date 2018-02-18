@@ -13,10 +13,10 @@
 					<div class="post col-xl-6">
 						<div class="post-details">
 							<h3 class="h4"><%= post.title %></h3></a>
-							<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+							<p class="text-muted"><%= truncate(post.content, length: 100) %></p>
 							<footer class="post-footer d-flex align-items-center">
 								<div class="title"><span></span></div></a>
-								<div class="see-post"><%= link_to 'voir le poste', post_path(post.id) %></div>
+								<div class="see-post"><%= link_to 'voir la suite', post_path(post.id) %></div>
 							</footer>
 						</div>
 					</div>

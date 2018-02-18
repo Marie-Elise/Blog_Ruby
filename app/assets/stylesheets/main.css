@@ -113,6 +113,9 @@ section.latest-posts header {
   color: #6675df;
   margin-bottom: 1rem;
 }
+div.content{
+  margin-bottom: 50px;
+}
 
 /* Latest bloggeurs */
 main,
